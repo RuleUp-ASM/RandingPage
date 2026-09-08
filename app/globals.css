@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+/*
+  Design tokens mirrored from the Figma file "RuleUp · 디자인"
+  (node 1322:2 — 랜딩 페이지). Names match the Figma variable names.
+*/
+@theme {
+  --color-ink: #101422;
+  --color-sub: #4e5666;
+  --color-faint: #8b93a5;
+
+  --color-primary: #6c5ce7;
+  --color-primary-50: #f2f0fe;
+  --color-primary-border: #e2ddfb;
+
+  --color-surface: #ffffff;
+  --color-canvas: #f3f5f8;
+  --color-line: #e6e9ef;
+
+  --color-success: #22c55e;
+  --color-success-bg: #e7f7ef;
+  --color-danger: #ef4444;
+  --color-danger-bg: #fdecec;
+  --color-warn: #f59e0b;
+  --color-warn-bg: #fff4e2;
+
+  /* Tier palette (평판 시스템) */
+  --color-bronze: #c08552;
+  --color-silver: #9aa5b1;
+  --color-gold: #e0a800;
+  --color-diamond: #4fb3f7;
+  --color-ruby: #e0245e;
+
+  --font-sans: "Noto Sans KR", -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo",
+    "Malgun Gothic", system-ui, sans-serif;
+
+  --shadow-card: 0 6px 20px 0 rgba(15, 20, 33, 0.05);
+  --shadow-nav: 0 2px 12px 0 rgba(15, 20, 33, 0.04);
+  --shadow-cta: 0 8px 20px 0 rgba(107, 92, 232, 0.3);
+  --shadow-on-brand: 0 8px 24px 0 rgba(26, 15, 77, 0.2);
+}
+
+html {
+  scroll-behavior: smooth;
+  /* Offset anchor targets so the sticky nav never covers a section heading.
+     Below md the nav carries a second row of section links. */
+  scroll-padding-top: 116px;
+}
+
+@media (min-width: 48rem) {
+  html {
+    scroll-padding-top: 76px;
+  }
+}
+
+body {
+  background: var(--color-surface);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Korean copy in the design never breaks mid-word. */
+.break-keep-ko {
+  word-break: keep-all;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
