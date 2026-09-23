@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Container } from "../ui/Container";
+import { INSTAGRAM_URL } from "../../lib/links";
 
 export function Hero() {
   return (
@@ -31,10 +32,12 @@ export function Hero() {
 
           <div className="mt-9 flex flex-wrap gap-3">
             <a
-              href="#cta"
+              href={INSTAGRAM_URL}
+              target="_blank"
+              rel="noreferrer"
               className="rounded-xl bg-gradient-to-r from-[#6b5ce8] to-[#946bf5] px-[30px] py-[17px] text-[15px] leading-none font-bold tracking-[-0.015em] text-white shadow-cta transition-opacity hover:opacity-95"
             >
-              앱 다운로드
+              인스타 구경하기
             </a>
             <a
               href="#features"

@@ -1,14 +1,17 @@
 import { Container } from "./ui/Container";
 import { Logo } from "./ui/Logo";
+import { INSTAGRAM_URL } from "../lib/links";
 
-const LINK_GROUPS = [
+type FooterLink = { label: string; href: string; external?: boolean };
+
+const LINK_GROUPS: { heading: string; links: FooterLink[] }[] = [
   {
     heading: "서비스",
     links: [
       { label: "기능 소개", href: "#features" },
       { label: "평판 시스템", href: "#reputation" },
       { label: "로드맵", href: "#cta" },
-      { label: "앱 다운로드", href: "#cta" },
+      { label: "인스타 구경하기", href: INSTAGRAM_URL, external: true },
     ],
   },
   {
@@ -48,6 +51,9 @@ export function Footer() {
                     <li key={link.label}>
                       <a
                         href={link.href}
+                        {...(link.external
+                          ? { target: "_blank", rel: "noreferrer" }
+                          : {})}
                         className="text-[12.5px] leading-none tracking-[-0.015em] text-[#6b7386] transition-colors hover:text-white"
                       >
                         {link.label}
