@@ -1,5 +1,5 @@
 import { Container } from "../ui/Container";
-import { PLAY_STORE_URL } from "../../lib/links";
+import { INSTAGRAM_URL, PLAY_STORE_URL } from "../../lib/links";
 
 export function Cta() {
   return (
@@ -33,10 +33,12 @@ export function Cta() {
             앱 다운로드하기
           </a>
           <a
-            href="#features"
+            href={INSTAGRAM_URL}
+            target="_blank"
+            rel="noreferrer"
             className="rounded-xl border border-white/45 bg-white/15 px-8 py-[18px] text-[15px] leading-none font-bold tracking-[-0.015em] text-white transition-colors hover:bg-white/25"
           >
-            앱 설명 보기
+            인스타 구경하기
           </a>
         </div>
 
