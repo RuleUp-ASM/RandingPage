@@ -1,6 +1,6 @@
 import { Container } from "./ui/Container";
 import { Logo } from "./ui/Logo";
-import { INSTAGRAM_URL } from "../lib/links";
+import { PLAY_STORE_URL } from "../lib/links";
 
 const MENU = [
   { label: "문제", href: "#problem" },
@@ -36,12 +36,12 @@ export function Nav() {
         </nav>
 
         <a
-          href={INSTAGRAM_URL}
+          href={PLAY_STORE_URL}
           target="_blank"
           rel="noreferrer"
           className="shrink-0 rounded-[10px] bg-primary px-5 py-[11px] text-[14px] leading-none font-bold tracking-[-0.015em] text-white transition-opacity hover:opacity-90"
         >
-          인스타 구경하기
+          앱 다운로드
         </a>
       </Container>
 

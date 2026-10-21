@@ -1,6 +1,6 @@
 import { Container } from "./ui/Container";
 import { Logo } from "./ui/Logo";
-import { INSTAGRAM_URL } from "../lib/links";
+import { INSTAGRAM_URL, PLAY_STORE_URL } from "../lib/links";
 
 type FooterLink = { label: string; href: string; external?: boolean };
 
@@ -11,6 +11,7 @@ const LINK_GROUPS: { heading: string; links: FooterLink[] }[] = [
       { label: "기능 소개", href: "#features" },
       { label: "평판 시스템", href: "#reputation" },
       { label: "로드맵", href: "#cta" },
+      { label: "앱 다운로드", href: PLAY_STORE_URL, external: true },
       { label: "인스타 구경하기", href: INSTAGRAM_URL, external: true },
     ],
   },
